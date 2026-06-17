@@ -22,7 +22,7 @@ while True:
             fn.actualizar_disponibilidad(inventario)
             print("disponibilidad actualizada")
         case 5:
-            print()#mostrar
+            fn.mostrar_producto(inventario)
         case 6:
             print("👋 Gracias por usar el sistema de inventario. Hasta pronto.")
             break

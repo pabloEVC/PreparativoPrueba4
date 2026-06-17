@@ -54,6 +54,7 @@ def agregar_producto(lista):
     print(" producto agregado correctamente ")
 
 def buscar_producto(lista,nombre):
+
     for i,prod in enumerate(lista):
         if prod["nombre"].lower() == nombre.lower():
             return i
@@ -81,5 +82,6 @@ def mostrar_producto(lista):
         print(f"Precio: ${prod['precio']}")
         print(f"Stock: {prod['stock']}")
         print(f"Estado: {estado}\n")
+        print("*************************************")
         
         
