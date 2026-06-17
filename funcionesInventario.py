@@ -48,7 +48,8 @@ def agregar_producto(lista):
     producto = {
         "nombre": nombre.strip(),
         "precio": float(precio),
-        "stock" : int(stock)
+        "stock" : int(stock),
+        "disponible":False
     }
     lista.append(producto)
     print(" producto agregado correctamente ")
