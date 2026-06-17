@@ -1,5 +1,5 @@
 #main
-
+inventario=[]
 import funcionesInventario as fn
 while True:
     fn.mostrar_Menu()
@@ -7,14 +7,22 @@ while True:
 
     match opcion:
         case 1:
-            print()#agregar
+            fn.agregar_producto(inventario)
         case 2:
-            print()#buscar
+            nombre=input("nombre del producto a buscar: ")
+            pos=fn.buscar_producto(inventario, nombre)
+            if pos != -1:
+                print("producto encontrado")
+            else:
+                print("producto no encontrado")
+            
         case 3:
-            print()#eliminar
+            fn.eliminar_producto(inventario)
         case 4:
-            print()#actualizar
+            fn.actualizar_disponibilidad(inventario)
+            print("disponibilidad actualizada")
         case 5:
             print()#mostrar
         case 6:
+            print("👋 Gracias por usar el sistema de inventario. Hasta pronto.")
             break
